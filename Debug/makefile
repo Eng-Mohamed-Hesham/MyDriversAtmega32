@@ -31,38 +31,38 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 LSS += \
-mydrivers.lss \
+MyDriversAtmega32.lss \
 
 SIZEDUMMY += \
 sizedummy \
 
 
 # All Target
-all: mydrivers.elf secondary-outputs
+all: MyDriversAtmega32.elf secondary-outputs
 
 # Tool invocations
-mydrivers.elf: $(OBJS) $(USER_OBJS)
+MyDriversAtmega32.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C Linker'
-	avr-gcc -Wl,-Map,mydrivers.map -mmcu=atmega16 -o "mydrivers.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-gcc -Wl,-Map,MyDriversAtmega32.map -mmcu=atmega16 -o "MyDriversAtmega32.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-mydrivers.lss: mydrivers.elf
+MyDriversAtmega32.lss: MyDriversAtmega32.elf
 	@echo 'Invoking: AVR Create Extended Listing'
-	-avr-objdump -h -S mydrivers.elf  >"mydrivers.lss"
+	-avr-objdump -h -S MyDriversAtmega32.elf  >"MyDriversAtmega32.lss"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-sizedummy: mydrivers.elf
+sizedummy: MyDriversAtmega32.elf
 	@echo 'Invoking: Print Size'
-	-avr-size --format=avr --mcu=atmega16 mydrivers.elf
+	-avr-size --format=avr --mcu=atmega16 MyDriversAtmega32.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(ELFS)$(OBJS)$(ASM_DEPS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) mydrivers.elf
+	-$(RM) $(ELFS)$(OBJS)$(ASM_DEPS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) MyDriversAtmega32.elf
 	-@echo ' '
 
 secondary-outputs: $(LSS) $(SIZEDUMMY)

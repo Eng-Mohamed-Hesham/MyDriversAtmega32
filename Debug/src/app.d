@@ -5,7 +5,8 @@ src/app.o src/app.o: ../src/app.c ../src/../include/LIB/STD_TYPES.h \
   ../src/../include/MCAL/EXTI/EXTI_Interface.h \
   ../src/../include/HAL/LED/LED_Interface.h \
   ../src/../include/HAL/SSD/SSD_Interface.h \
-  ../src/../include/HAL/BCD2SSD/BCD2SSD_Interface.h
+  ../src/../include/HAL/BCD2SSD/BCD2SSD_Interface.h \
+  ../src/../include/HAL/HDCMOTOR/DC_Motor_Interface.h
 
 ../src/../include/LIB/STD_TYPES.h:
 
@@ -22,3 +23,5 @@ src/app.o src/app.o: ../src/app.c ../src/../include/LIB/STD_TYPES.h \
 ../src/../include/HAL/SSD/SSD_Interface.h:
 
 ../src/../include/HAL/BCD2SSD/BCD2SSD_Interface.h:
+
+../src/../include/HAL/HDCMOTOR/DC_Motor_Interface.h:

@@ -5,6 +5,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../src/BCD2SSD_Program.c \
+../src/DC_Motor_Program.c \
 ../src/DIO_Program.c \
 ../src/EEPROM_program.c \
 ../src/EXTI_Program.c \
@@ -16,6 +17,7 @@ C_SRCS += \
 
 OBJS += \
 ./src/BCD2SSD_Program.o \
+./src/DC_Motor_Program.o \
 ./src/DIO_Program.o \
 ./src/EEPROM_program.o \
 ./src/EXTI_Program.o \
@@ -27,6 +29,7 @@ OBJS += \
 
 C_DEPS += \
 ./src/BCD2SSD_Program.d \
+./src/DC_Motor_Program.d \
 ./src/DIO_Program.d \
 ./src/EEPROM_program.d \
 ./src/EXTI_Program.d \

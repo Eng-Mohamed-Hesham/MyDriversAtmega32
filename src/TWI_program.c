@@ -105,7 +105,7 @@ TWI_ErrorStatus_t TWI_ErrorStatusSendRepeatedStartConditionWithACK(void)
 TWI_ErrorStatus_t TWI_ErrorStatusSendSlaveAddressWithWriteACK(u8 Copy_u8SlaveAddress)
 {
 	TWI_ErrorStatus_t Local_ErrorStatus = NoError;
-	u8 Local_u8TWCRValue = 0;
+	//u8 Local_u8TWCRValue = 0;
 
 	/*Set 7 bits slave address to the bus*/
 	TWDR = (Copy_u8SlaveAddress << 1);
